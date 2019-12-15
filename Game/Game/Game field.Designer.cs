@@ -88,6 +88,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "А";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -397,6 +398,7 @@
             // 
             // wordArea
             // 
+            this.wordArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.wordArea.Location = new System.Drawing.Point(12, 11);
             this.wordArea.Name = "wordArea";
             this.wordArea.Size = new System.Drawing.Size(307, 72);

@@ -22,3 +22,15 @@ G:\Game\Game\Game\obj\Debug\Game.Saccess_form.resources
 G:\Game\Game\Game\obj\Debug\Game.csproj.GenerateResource.cache
 G:\Game\Game\Game\obj\Debug\Game.exe
 G:\Game\Game\Game\obj\Debug\Game.pdb
+C:\Users\Banana6\Desktop\GWG\Guess-Word-Game\Game\Game\bin\Debug\Game.exe.config
+C:\Users\Banana6\Desktop\GWG\Guess-Word-Game\Game\Game\bin\Debug\Game.exe
+C:\Users\Banana6\Desktop\GWG\Guess-Word-Game\Game\Game\bin\Debug\Game.pdb
+C:\Users\Banana6\Desktop\GWG\Guess-Word-Game\Game\Game\obj\Debug\Game.csprojAssemblyReference.cache
+C:\Users\Banana6\Desktop\GWG\Guess-Word-Game\Game\Game\obj\Debug\Game.Form1.resources
+C:\Users\Banana6\Desktop\GWG\Guess-Word-Game\Game\Game\obj\Debug\Game.Game_field.resources
+C:\Users\Banana6\Desktop\GWG\Guess-Word-Game\Game\Game\obj\Debug\Game.Lose_form.resources
+C:\Users\Banana6\Desktop\GWG\Guess-Word-Game\Game\Game\obj\Debug\Game.Properties.Resources.resources
+C:\Users\Banana6\Desktop\GWG\Guess-Word-Game\Game\Game\obj\Debug\Game.Saccess_form.resources
+C:\Users\Banana6\Desktop\GWG\Guess-Word-Game\Game\Game\obj\Debug\Game.csproj.GenerateResource.cache
+C:\Users\Banana6\Desktop\GWG\Guess-Word-Game\Game\Game\obj\Debug\Game.exe
+C:\Users\Banana6\Desktop\GWG\Guess-Word-Game\Game\Game\obj\Debug\Game.pdb
