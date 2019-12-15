@@ -34,3 +34,15 @@ C:\Users\Banana6\Desktop\GWG\Guess-Word-Game\Game\Game\obj\Debug\Game.Saccess_fo
 C:\Users\Banana6\Desktop\GWG\Guess-Word-Game\Game\Game\obj\Debug\Game.csproj.GenerateResource.cache
 C:\Users\Banana6\Desktop\GWG\Guess-Word-Game\Game\Game\obj\Debug\Game.exe
 C:\Users\Banana6\Desktop\GWG\Guess-Word-Game\Game\Game\obj\Debug\Game.pdb
+E:\_Work\My_projects\Guess Word Game\Game\Game\obj\Debug\Game.csprojAssemblyReference.cache
+E:\_Work\My_projects\Guess Word Game\Game\Game\obj\Debug\Game.Form1.resources
+E:\_Work\My_projects\Guess Word Game\Game\Game\obj\Debug\Game.Game_field.resources
+E:\_Work\My_projects\Guess Word Game\Game\Game\obj\Debug\Game.Lose_form.resources
+E:\_Work\My_projects\Guess Word Game\Game\Game\obj\Debug\Game.Properties.Resources.resources
+E:\_Work\My_projects\Guess Word Game\Game\Game\obj\Debug\Game.Saccess_form.resources
+E:\_Work\My_projects\Guess Word Game\Game\Game\obj\Debug\Game.csproj.GenerateResource.cache
+E:\_Work\My_projects\Guess Word Game\Game\Game\obj\Debug\Game.exe
+E:\_Work\My_projects\Guess Word Game\Game\Game\obj\Debug\Game.pdb
+E:\_Work\My_projects\Guess Word Game\Game\Game\bin\Debug\Game.exe.config
+E:\_Work\My_projects\Guess Word Game\Game\Game\bin\Debug\Game.exe
+E:\_Work\My_projects\Guess Word Game\Game\Game\bin\Debug\Game.pdb

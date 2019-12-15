@@ -18,18 +18,11 @@ namespace Game
             lives_image = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6 };
             words = new string[] { "карнавал", "ёлочка", "праздник", "дед мороз", "олень", "сюрприз", "зима", "снегурочка" };
             current_word = "";
-            show_text = "";
-            count_success = 0;
-            count_spaces = 0;
             lives = lives_image.Length;
-            //pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
             start_game(wordArea);
         }
         static string[] words;
         static string current_word;
-        static string show_text;
-        static int count_success;
-        static int count_spaces;
         static int lives;
         static PictureBox[] lives_image;
         static void start_game (RichTextBox wordArea)
@@ -43,7 +36,14 @@ namespace Game
             string result_string = "";
             for (int i = 0; i < word.Length; i++)
             {
-                result_string += "—";
+                if (word[i] == ' ')
+                {
+                    result_string += " ";
+                }
+                else 
+                {
+                    result_string += "@";
+                }
             }
             return result_string;
         }
@@ -78,8 +78,9 @@ namespace Game
         {
             if (is_contains(current_word, symbol))
             {
-                wordArea.Text = get_new_show_text(current_word, symbol, wordArea.Text);
-                if(is_contains(wordArea.Text, '—'))
+                string new_show_text = get_new_show_text(current_word, symbol, wordArea.Text);
+                wordArea.Text = new_show_text;
+                if (is_contains(wordArea.Text, '@'))
                 {
                     return;
                 }
@@ -109,170 +110,169 @@ namespace Game
             }
         }
 
-        private void button01_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'а', button01, button21);
+            button_symbol_click(wordArea, 'а', button1, button21);
         }
 
-        private void Button02_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'б', button02, button21);
+            button_symbol_click(wordArea, 'б', button2, button21);
         }
 
-        private void Button03_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'в', button03, button21);
+            button_symbol_click(wordArea, 'в', button3, button21);
         }
 
-        private void Button04_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'г', button04, button21);
+            button_symbol_click(wordArea, 'г', button4, button21);
         }
 
-        private void Button05_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'д', button05, button21);
+            button_symbol_click(wordArea, 'д', button5, button21);
         }
 
-        private void Button06_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'е', button06, button21);
+            button_symbol_click(wordArea, 'e', button6, button21);
         }
 
-        private void Button07_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'ё', button07, button21);
+            button_symbol_click(wordArea, 'ё', button7, button21);
         }
 
-        private void Button08_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'ж', button08, button21);
+            button_symbol_click(wordArea, 'ж', button8, button21);
         }
 
-        private void Button09_Click(object sender, EventArgs e)
+        private void button9_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'з', button09, button21);
+            button_symbol_click(wordArea, 'з', button9, button21);
         }
 
-        private void Button10_Click(object sender, EventArgs e)
+        private void button10_Click(object sender, EventArgs e)
         {
             button_symbol_click(wordArea, 'и', button10, button21);
         }
 
-        private void Button11_Click(object sender, EventArgs e)
+        private void button11_Click(object sender, EventArgs e)
         {
             button_symbol_click(wordArea, 'й', button11, button21);
         }
 
-        private void Button12_Click(object sender, EventArgs e)
+        private void button12_Click(object sender, EventArgs e)
         {
             button_symbol_click(wordArea, 'к', button12, button21);
         }
 
-        private void Button13_Click(object sender, EventArgs e)
+        private void button13_Click(object sender, EventArgs e)
         {
             button_symbol_click(wordArea, 'л', button13, button21);
         }
 
-        private void Button14_Click(object sender, EventArgs e)
+        private void button14_Click(object sender, EventArgs e)
         {
             button_symbol_click(wordArea, 'м', button14, button21);
         }
 
-        private void Button15_Click(object sender, EventArgs e)
+        private void button16_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'н', button15, button21);
+            button_symbol_click(wordArea, 'н', button16, button21);
         }
 
-        private void Button16_Click(object sender, EventArgs e)
+        private void button35_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'о', button16, button21);
+            button_symbol_click(wordArea, 'о', button35, button21);
         }
 
-        private void Button17_Click(object sender, EventArgs e)
+        private void button24_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'п', button17, button21);
+            button_symbol_click(wordArea, 'п', button24, button21);
         }
 
-        private void Button18_Click(object sender, EventArgs e)
+        private void button15_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'р', button18, button21);
+            button_symbol_click(wordArea, 'р', button15, button21);
         }
 
-        private void Button19_Click(object sender, EventArgs e)
+        private void button19_Click(object sender, EventArgs e)
         {
             button_symbol_click(wordArea, 'с', button19, button21);
         }
 
-        private void Button20_Click(object sender, EventArgs e)
+        private void button32_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'т', button20, button21);
+            button_symbol_click(wordArea, 'т', button32, button21);
         }
 
-        private void Button21_Click(object sender, EventArgs e)
+        private void button34_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'у', button21, button21);
+            button_symbol_click(wordArea, 'у', button34, button21);
         }
 
-        private void Button22_Click(object sender, EventArgs e)
+        private void button33_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'ф', button22, button21);
+            button_symbol_click(wordArea, 'ф', button33, button21);
         }
 
-        private void Button23_Click(object sender, EventArgs e)
+        private void button25_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'х', button23, button21);
+            button_symbol_click(wordArea, 'х', button25, button21);
         }
 
-        private void Button24_Click(object sender, EventArgs e)
+        private void button18_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'ц', button24, button21);
+            button_symbol_click(wordArea, 'ц', button18, button21);
         }
 
-        private void Button25_Click(object sender, EventArgs e)
+        private void button17_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'ч', button25, button21);
+            button_symbol_click(wordArea, 'ч', button17, button21);
         }
 
-        private void Button26_Click(object sender, EventArgs e)
+        private void button20_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'ш', button26, button21);
+            button_symbol_click(wordArea, 'ш', button20, button21);
         }
 
-        private void Button27_Click(object sender, EventArgs e)
+        private void button22_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'щ', button27, button21);
+            button_symbol_click(wordArea, 'щ', button22, button21);
         }
 
-        private void Button28_Click(object sender, EventArgs e)
+        private void button23_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'ъ', button28, button21);
+            button_symbol_click(wordArea, 'ъ', button23, button21);
         }
 
-        private void Button29_Click(object sender, EventArgs e)
+        private void button26_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'ы', button29, button21);
+            button_symbol_click(wordArea, 'ы', button26, button21);
         }
 
-        private void Button30_Click(object sender, EventArgs e)
+        private void button31_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'ь', button30, button21);
+            button_symbol_click(wordArea, 'ь', button31, button21);
         }
 
-        private void Button31_Click(object sender, EventArgs e)
+        private void button27_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'э', button31, button21);
+            button_symbol_click(wordArea, 'э', button27, button21);
         }
 
-        private void Button32_Click(object sender, EventArgs e)
+        private void button28_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'ю', button32, button21);
+            button_symbol_click(wordArea, 'ю', button28, button21);
         }
 
-        private void Button33_Click(object sender, EventArgs e)
+        private void button29_Click(object sender, EventArgs e)
         {
-
-            button_symbol_click(wordArea, 'я', button33, button21);
+            button_symbol_click(wordArea, 'я', button29, button21);
         }
     }
 }
