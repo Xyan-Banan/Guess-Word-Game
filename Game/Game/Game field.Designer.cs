@@ -288,6 +288,7 @@
             this.button21.TabIndex = 28;
             this.button21.Text = "Начать заново";
             this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button22
             // 
@@ -377,6 +378,7 @@
             this.button30.TabIndex = 37;
             this.button30.Text = "Закрыть";
             this.button30.UseVisualStyleBackColor = true;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
             // button31
             // 
@@ -434,7 +436,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.wordArea.AutoWordSelection = true;
-            this.wordArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.wordArea.Font = new System.Drawing.Font("Harlow Solid Italic", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wordArea.Location = new System.Drawing.Point(12, 11);
             this.wordArea.Name = "wordArea";
             this.wordArea.ReadOnly = true;

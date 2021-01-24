@@ -12,6 +12,10 @@ namespace Game
 {
     public partial class Game_field : Form
     {
+        static string[] words;
+        static string current_word;
+        static int lives;
+        static PictureBox[] lives_image;
         public Game_field()
         {
             InitializeComponent();
@@ -21,17 +25,14 @@ namespace Game
             lives = lives_image.Length;
             start_game(wordArea);
         }
-        static string[] words;
-        static string current_word;
-        static int lives;
-        static PictureBox[] lives_image;
-        static void start_game (RichTextBox wordArea)
+        static void start_game(RichTextBox wordArea)
         {
             Random rnd = new Random();
             current_word = words[rnd.Next(0, words.Length)];
             wordArea.Text = get_show_text(current_word);
+            centering_text(wordArea);
         }
-        static string get_show_text (string word)
+        static string get_show_text(string word)
         {
             string result_string = "";
             for (int i = 0; i < word.Length; i++)
@@ -40,7 +41,7 @@ namespace Game
                 {
                     result_string += " ";
                 }
-                else 
+                else
                 {
                     result_string += "@";
                 }
@@ -49,24 +50,25 @@ namespace Game
         }
         static void centering_text(RichTextBox word_area)
         {
-
+            word_area.SelectAll();
+            word_area.SelectionAlignment = HorizontalAlignment.Center;
         }
-        static bool is_contains (string word,char symbol)
+        static bool is_contains(string word, char symbol)
         {
-           for (int i = 0; i < word.Length; i++)
-           {
+            for (int i = 0; i < word.Length; i++)
+            {
                 if (word[i] == symbol)
                 {
                     return true;
                 }
-           }
-           return false;
+            }
+            return false;
         }
-        static string get_new_show_text (string word, char symbol,string old_show_text)
+        static string get_new_show_text(string word, char symbol, string old_show_text)
         {
-            for(int i = 0; i < word.Length; i++)
+            for (int i = 0; i < word.Length; i++)
             {
-                if(word[i]==symbol)
+                if (word[i] == symbol)
                 {
                     old_show_text = old_show_text.Remove(i, 1);
                     old_show_text = old_show_text.Insert(i, symbol.ToString());
@@ -74,40 +76,39 @@ namespace Game
             }
             return old_show_text;
         }
-        static void button_symbol_click (RichTextBox wordArea, char symbol, Button cur_button, Button startButton)
+        static void button_symbol_click(RichTextBox wordArea, char symbol, Button cur_button, Button startButton)
         {
             if (is_contains(current_word, symbol))
             {
                 string new_show_text = get_new_show_text(current_word, symbol, wordArea.Text);
                 wordArea.Text = new_show_text;
-                if (is_contains(wordArea.Text, '@'))
-                {
-                    return;
-                }
-                else
-                {
-                    using (Saccess_form saccess_Form = new Saccess_form())
-                    {
-                        saccess_Form.ShowDialog();
-                    }
-                }
+                centering_text(wordArea);
             }
-            else 
+            else
             {
                 lives--;
                 lives_image[lives].Visible = false;
-                if(lives > 0)
+            }
+
+            cur_button.Enabled = false;
+            
+            if (!is_contains(wordArea.Text, '@'))
+            {
+                using (SuccessForm successForm = new SuccessForm())
                 {
-                    return;
-                }
-                else
-                {
-                    using (Lose_form lose_Form = new Lose_form())
-                    {
-                        lose_Form.ShowDialog();
-                    }
+                    successForm.ShowDialog();
                 }
             }
+            
+            if (lives == 0)
+            {
+                using (LossForm lossForm = new LossForm())
+                {
+                    lossForm.ShowDialog();
+                }
+                startButton.PerformClick();
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -137,7 +138,7 @@ namespace Game
 
         private void button6_Click(object sender, EventArgs e)
         {
-            button_symbol_click(wordArea, 'e', button6, button21);
+            button_symbol_click(wordArea, 'е', button6, button21);
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -273,6 +274,27 @@ namespace Game
         private void button29_Click(object sender, EventArgs e)
         {
             button_symbol_click(wordArea, 'я', button29, button21);
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            start_game(wordArea);
+
+            Button[] buttons = new Button[] { button1, button2, button3, button4, button5,
+            button6, button7, button8, button9, button10, button11, button12, button13,
+            button14, button15, button16, button17, button18, button19, button20, button21,
+            button22, button23, button24, button25, button26, button27, button28, button29,
+            button30, button31, button32, button33, button34, button35};
+
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                buttons[i].Enabled = true;
+            }
         }
     }
 }
